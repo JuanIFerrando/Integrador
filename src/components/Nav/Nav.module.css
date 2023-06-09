@@ -1,0 +1,23 @@
+.nav {
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    align-items: center;
+ }
+
+.linkContainer {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+    height: fit-content;
+} 
+
+.linkText {
+    height: 30px;
+    cursor: pointer;
+}
