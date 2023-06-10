@@ -1,5 +1,5 @@
 .nav {
-    background-color: red;
+    background-color: #414141;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,21 +9,24 @@
  }
 
 .containerLinks {
-    height: 100%;
+    height: 140%;
 } 
 
 .linkContainer {
     display: inline-flex;
     height: 50px;
     text-decoration: none;
-    color: white;
-    background-color: #333;
+    color: #12e6c8;
+    background-color: #000000;
     align-items: center;
-    transition: 0.3s;
+    transition: transform 0.1s ease;
+    border-radius: 13px;
+    margin: 10px;
 } 
 
 .linkContainer:hover {
-    background-color: #111;
+    background-color: #a287f4;
+    transform: scale(1.05);
   }
 
 .linkText {
@@ -34,14 +37,21 @@
 .addButton {
     cursor: pointer;
     height: 100%;
-    background: #2d3b55;
-    color: #fff;
+    background: #12e6c8;
+    color: #000000;
     padding: 14px;
-    border: none;
+    border-radius: 13px;
     font-size: inherit;
-    transition: 0.3s;
+    transition: transform 0.1s ease;
+    margin: 10px;
 }
 
 .addButton:hover {
-    background-color: #111;
-  }
+    transform: scale(1.05);
+    background-color: #a287f4;
+}
+
+.ButtonText {
+    padding: 0 20px;
+    cursor: pointer;
+}

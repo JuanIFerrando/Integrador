@@ -1,7 +1,7 @@
 .cardsContainer{
+    background-image: url(https://fondosanimados.com/wp-content/uploads/2023/02/rick-and-morty-in-the-space-wallpaper-estatico.jpg);
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: rgb(224, 224, 137);
     flex-wrap: wrap;
 }

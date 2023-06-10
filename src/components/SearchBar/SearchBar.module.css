@@ -3,12 +3,12 @@
   display: flex;
   justify-content: center;
   border: 0px;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px;
   background-color: #808080;
 }
 
 .searchInput {
-  border: solid #39ff14 3px;
+  border: solid #a287f4 3px;
   border-radius: 10px 0px 0px 10px;
   box-sizing: border-box;
   box-shadow: inset 0 0 5px#5a41a0;
@@ -18,10 +18,14 @@
   height: 30px;
   border: 0px;
   border-radius: 0px 10px 10px 0px;
-  background-color: aquamarine;
+  background-color: #12e6c8;
+  transition: transform 0.3s ease;
 }
-  
 
-.searchButtons {
-  height: 30px;
+.searchButtons:hover {
+  transform: scale(1.05);
+  border-radius: 10px;
+  background-color: #a287f4;
 }
+
+  

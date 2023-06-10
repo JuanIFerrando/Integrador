@@ -1,13 +1,13 @@
 .cardContainer {
-    background-color: #021b3d;
+    background-color:  #a287f4;
     width: fit-content;
     padding: 1em;
     border-radius: 15px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    text-shadow: 2px 5px 4px rgba(38,159,113,0.6);
+    text-shadow: 2px 5px 4px rgba(0, 2, 1, 0.6);
     display: flex;
     flex-direction: column;
-    border: 3px solid grey;
+    border: 3px solid #000000;
     cursor: pointer;
     margin: 2%;
 };
@@ -15,7 +15,7 @@
 .card {
     background-color: #3b3939;
     border-radius: 7px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px #414141(0,0,0,0.75);
     padding: 7px;
     margin-bottom: 7px;
 };
@@ -27,13 +27,13 @@
     height: fit-content;
     border-radius: 7px;
     transition: 0.5px;
-    color: rgb(221, 71, 78);
+    color: #414141;
     margin: 5%;
 };  
 
 .closeButton:hover {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    background-color: red;
+    background-color: #414141;
     color: white;
     transition: 3s;
 };
