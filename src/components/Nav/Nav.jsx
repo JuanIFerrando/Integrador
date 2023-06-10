@@ -6,29 +6,30 @@ import style from "./Nav.module.css";
 export default function Nav({onSearch, random}) {
     return (
         <div className={style.nav}>
+          <div className={style.containerLinks}>
           <Link className={style.linkContainer} to="/home">
             <label className={style.linkText}>
-              HOME    
+              Home    
             </label>
           </Link>
 
           <Link className={style.linkContainer} to="/about">
             <label className={style.linkText}>
-              ABOUT  
+              About  
             </label>
           </Link>  
 
           <Link className={style.linkContainer} to="/favorites">
             <label className={style.linkText}>
-              FAVORITES  
+              Favorites  
             </label>
           </Link>  
+          </div>
 
             <SearchBar onSearch={onSearch} />
-            <button className="random" onClick={random}>
-                ADD RANDOM
+            <button className={style.addButton} onClick={random}>
+                Add Random
             </button>
         </div>
     );
-}; 
-
+};

@@ -1,23 +1,47 @@
 .nav {
     background-color: red;
-    padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 1em;
+    justify-content: space-between;
     align-items: center;
+    height: 50px;
+    font-family: 'Rubik', sans-serif;
  }
 
-.linkContainer {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    background-color: black;
-    border-radius: 10px;
-    height: fit-content;
+.containerLinks {
+    height: 100%;
 } 
 
+.linkContainer {
+    display: inline-flex;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    align-items: center;
+    transition: 0.3s;
+} 
+
+.linkContainer:hover {
+    background-color: #111;
+  }
+
 .linkText {
-    height: 30px;
+    padding: 0 20px;
     cursor: pointer;
 }
+
+.addButton {
+    cursor: pointer;
+    height: 100%;
+    background: #2d3b55;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    font-size: inherit;
+    transition: 0.3s;
+}
+
+.addButton:hover {
+    background-color: #111;
+  }

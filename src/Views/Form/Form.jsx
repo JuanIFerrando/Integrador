@@ -33,33 +33,31 @@ export default function Form({login}) {
     };
 
     return (
-        <form onSubmit={submitHandler}>
-            <div>
-              <label htmlFor="email">EMAIL:</label>
-              <input 
-                className={erorrs.email ? style.error : style.success}
-                type="text" 
-                name="email" 
-                value={userData.email} 
-                onChange={handleChange}
-              />
-              <span>{erorrs.email}</span>
-            </div>
+        <div className={style.container}>
+          <form className={style.form} onSubmit={submitHandler}>
+              <h1 className={style.formTitle}>Login</h1>
+                <input 
+                  className={erorrs.email ? style.error : style.success}
+                  placeholder="Email"
+                  type="email" 
+                  name="email" 
+                  value={userData.email} 
+                  onChange={handleChange}
+                />
+                <span>{erorrs.email}</span>
+                <input
+                  className={erorrs.password ? style.error : style.success}
+                  placeholder="Password"
+                  type="password" 
+                  name="password" 
+                  value={userData.password}
+                  onChange={handleChange}
+                />
+                <span>{erorrs.password}</span>
 
-            <div>
-              <label htmlFor="password">PASSWORD:</label>
-              <input
-                className={erorrs.password ? style.error : style.success}
-                type="text" 
-                name="password" 
-                value={userData.password}
-                onChange={handleChange}
-              />
-              <span>{erorrs.password}</span>
-            </div>
-
-            <button type="submit">Login</button>
-          
-        </form>
+              <button className={style.submit} type="submit">Sign in</button>
+            
+          </form>
+        </div>
     );
 }

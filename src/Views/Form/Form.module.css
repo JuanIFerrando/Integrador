@@ -1,9 +1,55 @@
 .success{
-    border: 1px solid green;
-    background-color: rgb(197, 238, 197);
+    border: 0;
+    border-bottom: 2px solid green;
+    font-size: 16px;
+    width: 70%;
+    padding: 10px 20px;
+    outline: none;
 }
 
 .error{
-    border: 1px solid red;
-    background-color: rgb(243, 194, 194);
+    border: 0;
+    border-bottom: 2px solid red;
+    font-size: 16px;
+    width: 70%;
+    padding: 10px 1px;
+    outline: none;
+}
+
+.container {
+    background-image: url(https://fondosanimados.com/wp-content/uploads/2023/02/rick-and-morty-in-the-space-wallpaper-estatico.jpg);
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    width: 350px;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+.formTitle {
+    width: 70%;
+    font-weight: 300;
+    padding: 15px 15px 0 15px;
+}
+
+.submit {
+    cursor: pointer;
+    width: 100%;
+    background: #2d3b55;
+    color: #fff;
+    padding: 18px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 20px;
 }

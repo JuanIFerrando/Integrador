@@ -1,16 +1,23 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions-types";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, ADD_CHAR } from "./actions-types";
+
+export const addChar = (character) => {
+    return { 
+        type: ADD_CHAR, 
+        payload: character
+    };
+};
 
 export const addFav = (character) => {
     return { 
         type: ADD_FAV, 
-        payload: character,
+        payload: character
     };
 };
 
 export const removeFav = (id) => {
     return { 
         type: REMOVE_FAV, 
-        payload: id,
+        payload: id
     };
 };
 

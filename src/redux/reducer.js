@@ -1,4 +1,4 @@
-import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./actions-types";
+import { ADD_FAV, REMOVE_FAV, FILTER, ORDER, ADD_CHAR } from "./actions-types";
 
 
 
@@ -9,30 +9,38 @@ const initialState = {
 
 const rootReducer = (state=initialState, {type, payload}) => {
     switch ( type ) {
+        case ADD_CHAR:
+            return {
+                ...state, 
+                allCharacters: state.myFavorites.includes(payload) ? [...state.allCharacters] : [...state.allCharacters, payload]
+            };
+
         case ADD_FAV:
             return {
                 ...state, 
-                myFavorites: [...state.myFavorites, payload],
-                allCharacters: [...state.allCharacters, payload],
+                myFavorites: state.myFavorites.includes(payload) ? [...state.myFavorites] : [...state.myFavorites, payload]
             };
         
         case REMOVE_FAV:
+            console.log(state.myFavorites, 'favoritos')
             return {
                 ...state, 
-                myFavorites: state.myFavorites.filter(fav => fav.id !== payload),
+                myFavorites: state.myFavorites.filter(
+                    (character) => character.id !== Number(payload)
+                )
             }; 
             
         case FILTER:
+            console.log(payload, 'filtro')
             const allCharactersFiltered = state.allCharacters.filter(character => character.gender === payload)
+            console.log(state.allCharacters, 'filtrados')
             return {
                 ...state,
-                myFavorites: 
-                payload === "allCharacters"
-                ? [...state.allCharacters]
-                : allCharactersFiltered,
+                myFavorites: allCharactersFiltered
             }    
 
         case ORDER:
+            console.log(payload, 'orden')
             const allCharactersCopy = [...state.allCharacters]
             return {
                 ...state,

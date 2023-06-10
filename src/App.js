@@ -11,15 +11,17 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Favorites from "./Views/Favorites/Favorites.jsx";
+import { connect, useDispatch } from "react-redux";
+import { addChar } from "./redux/actions.js";
 
-
-function App() {
+function App({chars}) {
 
    // ! HOOKS
    const [characters, setCharacters] = useState([]);
    const location = useLocation(); // const { pathname } = useLocation();
    const [access, setAccess] = useState(false);
    const navigate = useNavigate();
+   const dispatch = useDispatch();
    
    // ! CREDENCIALES FALSAS
    const EMAIL = 'terito@gmail.com';
@@ -35,9 +37,9 @@ function App() {
       }
    }
 
-   useEffect(() => {
-      !access && navigate('/');
-   }, [access]);
+   // useEffect(() => {
+   //    !access && navigate('/');
+   // }, [access]);
    
 
 
@@ -83,7 +85,7 @@ function App() {
          .then(response=>response.json())
          .then(data=>{
             if(data.name && !characters.find((char) => char.id === data.id)) {
-               setCharacters((oldChars) => [...oldChars, data]);
+               dispatch(addChar(data))
                // setCharacters([...characters, data]);
             } else {
                alert('¡No hay personajes con este ID!');
@@ -107,7 +109,7 @@ function App() {
          <Routes>
            <Route 
              path="/home" 
-             element={<Cards characters={characters} onClose={onClose} />} 
+             element={<Cards characters={chars} onClose={onClose} />} 
            />
 
            <Route 
@@ -138,5 +140,11 @@ function App() {
       </div>
    ); 
 }
+const mapStateToProps = (state) => {
+   return {
+      chars: state.allCharacters
+   }
+}
 
-export default App;
+export default connect(mapStateToProps, null)(App);
+
